@@ -11,8 +11,21 @@
     - ```php artisan migrate```
     - ```php artisan vendor:publish --tag=jetstream-views```
     - ```php artisan migrate:fresh```
-- Make Post model and migration
-  - ```php artisan make:model Post -m```
+    - Make Post model and migration
+      - ```php artisan make:model Post -m```
+      - create_posts_table.php 
+       ``` Schema::create('posts', function (Blueprint $table) {
+                $table->id();
+                $table->unsignedBigInteger('user_id');
+                $table->string('title');
+                $table->string('slug')->unique();
+                $table->text('body');
+                $table->string('image');
+                $table->boolean('active');
+                $table->timestamps();
+            });
+        ```
+      - ```php artisan migrate```
 - Install role and permission
 - Modify jetstream navbar
 - Create navbar component for guest
