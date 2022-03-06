@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    // auth()->user()->assignRole('admin');
     return view('welcome');
 });
 

@@ -83,6 +83,9 @@
 - Create Post list component
 - Create livewire post show component
 
+
+---------------------------------------------------
+
 ---------------------------------------------------
 ## [Laravel-Permission](https://spatie.be/docs/laravel-permission/v4/introduction)
 **Associate users with roles and permissions**
@@ -174,13 +177,25 @@ protected $routeMiddleware = [
 ];
 ```
 
-
-**App\Http\Kernel.php**
+## [Using Permissions via Roles](https://spatie.be/docs/laravel-permission/v4/basic-usage/role-permissions)
+Assigning Roles
+A role can be assigned to any user:
 ```
-    protected $routeMiddleware = [
-        'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
-    ];
-```
+$user->assignRole('writer');
 
+// You can also assign multiple roles at once
+$user->assignRole('writer', 'admin');
+// or as an array
+$user->assignRole(['writer', 'admin']);
+```
+A role can be removed from a user:
+```
+$user->removeRole('writer');
+```
+Roles can also be synced:
+````
+// All current roles will be removed from the user and replaced by the array given
+$user->syncRoles(['writer', 'admin']);
+```
 
 
