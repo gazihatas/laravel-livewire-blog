@@ -76,6 +76,49 @@
      ];
     ```
 - Modify jetstream navbar
+  - routes/**web.php**
+    ```
+    Route::get('/', function () {
+    // auth()->user()->assignRole('admin'); //added
+    return view('welcome');
+    });
+    ```
+  - **tailwind.config.js**
+    ```
+        const defaultTheme = require('tailwindcss/defaultTheme');
+        module.exports = {
+        darkMode: "class", // => !added
+        content: [
+         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+         './vendor/laravel/jetstream/**/*.blade.php',
+         './storage/framework/views/*.php',
+         './resources/views/**/*.blade.php',
+        ],
+        theme: {
+          extend: {
+             fontFamily: {
+                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+             },
+           },
+        },
+       plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+       };
+    ```
+  - resources/views/layouts/**app.blade.php**
+    ```
+    <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
+    ```
+  - resources/views/layouts/**guest.blade.php**
+    ```
+    <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
+    ```
+  - resources/views/**navigation-menu.blade.php**
+    ```
+     <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100">
+      <x-jet-nav-link class="dark:text-gray-200 font-bold" href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+           {{ __('Dashboard') }}
+      </x-jet-nav-link>     
+    ```
 - Create navbar component for guest
 - Create livewire Posts component
 - Add table to display all posts
@@ -83,8 +126,6 @@
 - Create Post list component
 - Create livewire post show component
 
-
----------------------------------------------------
 
 ---------------------------------------------------
 ## [Laravel-Permission](https://spatie.be/docs/laravel-permission/v4/introduction)
