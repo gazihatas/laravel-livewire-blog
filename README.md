@@ -321,8 +321,19 @@ Roles can also be synced:
   - [responsive-navbar-with-dropdown | jan-heise](https://github.com/jan-heise/responsive-navbar-with-dropdown)
     - [Resource Code](https://github.com/jan-heise/responsive-navbar-with-dropdown/blob/master/public/navbar.html)
 
+-----------------------------------------------------    
+
+## Tailwind CSS
+- [Card](https://play.tailwindcss.com/l2PN5DPJp9)
+- [Laravel new](https://play.tailwindcss.com/gT29a88n1U)
+- [Grid](https://play.tailwindcss.com/Gnn3B6nBx5)
+- [Bounce](https://play.tailwindcss.com/sLwvh00J9R)
+- [Ping](https://play.tailwindcss.com/RZIG3MvHKK)
+- [Pulse](https://play.tailwindcss.com/WqsWI4w1I2)
+- [Wiggle](https://play.tailwindcss.com/tDqLg3Z1WL)
 
 
-
-
+- [Card](https://play.tailwindcss.com/kugOBLdmVV)
+- [Form](https://play.tailwindcss.com/cGTQRwjsZ8)
+- [Table](https://play.tailwindcss.com/CrgBmMsvoY)
 
