@@ -164,7 +164,29 @@
       ```
       </details>
     - 
-7. ## <font color="aqua"> Create livewire Posts component </font>
+7. ## <font color="aqua"> Create livewire Posts component </font> 
+   - ```php artisan make:livewire Posts```
+   - [//]: # (resources/views/livewire/posts.blade.php)
+   - <details><summary>resources/views/livewire/posts.blade.php</summary>
+   
+     ```
+        <div>
+             <h1>Posts Component</h1>
+        </div>
+     ```
+     </details>
+   - [//]: # (routes/web.php)
+   - <details><summary>routes/web.php</summary>
+
+     ```
+         use App\Http\Livewire\Posts;
+     
+         Route::group(['middleware' => ['auth:sanctum', 'role:admin']], function (){
+         Route::get('/admin/posts', Posts::class)->name('posts.index');
+         });
+
+     ```
+     </details>
 8. ## <font color="aqua"> Add table to display all posts </font>
 9. ## <font color="aqua"> Add modal to create post and edit post </font>
 10. ## <font color="aqua"> Create Post list component </font>
