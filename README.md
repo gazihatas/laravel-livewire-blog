@@ -323,7 +323,7 @@ Roles can also be synced:
 
 -----------------------------------------------------    
 
-## Tailwind CSS
+## Tailwind CSS extensions
 - [Card](https://play.tailwindcss.com/l2PN5DPJp9)
 - [Laravel new](https://play.tailwindcss.com/gT29a88n1U)
 - [Grid](https://play.tailwindcss.com/Gnn3B6nBx5)
